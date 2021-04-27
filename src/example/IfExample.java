@@ -54,25 +54,31 @@ public class IfExample {
 		int sum = kor + eng + math;
 		double avg = (int)((sum / 3.0) * 10) / 10.0;
 		
-		System.out.println("이름: " + name);
-		System.out.println("총점: " + sum);
-		System.out.println("평균: " + avg);
-		
-		if(avg >= 90) {
-			grade = "A";
-			System.out.println("학점: " + grade);
-		} else if(avg >= 80) {
-			grade = "B";
-			System.out.println("학점: " + grade);
-		} else if(avg >= 70) {
-			grade = "C";
-			System.out.println("학점: " + grade);
-		} else if(avg >= 60) {
-			grade = "D";
-			System.out.println("학점: " + grade);
+		if(kor < 0 || kor > 100 || eng < 0 || eng > 100 || math < 0 || math > 100) {
+			
+			System.exit(0);
+			
 		} else {
-			grade = "F";
-			System.out.println("학점: " + grade);
+			System.out.println("이름: " + name);
+			System.out.println("총점: " + sum);
+			System.out.println("평균: " + avg);
+			
+			if(avg >= 90) {
+				grade = "A";
+				System.out.println("학점: " + grade);
+			} else if(avg >= 80) {
+				grade = "B";
+				System.out.println("학점: " + grade);
+			} else if(avg >= 70) {
+				grade = "C";
+				System.out.println("학점: " + grade);
+			} else if(avg >= 60) {
+				grade = "D";
+				System.out.println("학점: " + grade);
+			} else {
+				grade = "F";
+				System.out.println("학점: " + grade);
+			}
 		}
 
 	}

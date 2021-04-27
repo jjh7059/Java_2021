@@ -17,20 +17,12 @@ public class OperatorExample {
 		//출력하세요.
 		//단, 15대 이상 구매할 경우 1대당 25%의 할인율을 적용하여 계산
 		//삼항연산자 이용
-		int pay = 150000000;
+		long pay = 150000000;
 		int plane = 20;
 		
-		if(plane >= 15) {
-			System.out.println((pay * plane) - (pay * plane) / 4);
-			
-		} else {
-			System.out.println(pay * plane);
-		}
+		pay = plane >= 15 ? (pay * plane) - (pay * plane) / 4 : pay * plane; 
 		
-		//System.out.println(plane >= 15 ? (pay * plane) - (pay * plane) * 0.25 : pay * plane + "원입니다.");
-		
-		
-		
+		System.out.println("비행기 " + plane + "대의 가격은 " + pay + "원 입니다.");
 		System.out.println("==========================");
 	}
 }
