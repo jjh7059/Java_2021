@@ -21,6 +21,7 @@ public class OperatorExample {
 		int plane = 20;
 		pay = plane > 15 ? (pay * plane) - (int)((pay * plane) * 0.25) : (pay * plane);
 		System.out.println("비행기 " + plane + "대의 가격은 " + pay + "원 입니다.");
+		
 		System.out.println("==========================");
 	}
 }
