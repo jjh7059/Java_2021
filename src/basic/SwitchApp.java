@@ -12,6 +12,8 @@ public class SwitchApp {
 			System.out.println("금성으로 이동합니다.");
 		case 3:
 			System.out.println("화성으로 이동합니다.");
+		default:
+			System.out.println("지구로 이동합니다.");
 		}
 		System.out.println("==========================");
 		
