@@ -19,9 +19,16 @@ public class OperatorExample {
 		//삼항연산자 이용
 		long pay = 150000000;
 		int plane = 20;
+
 		pay = plane > 15 ? (pay * plane) - (int)((pay * plane) * 0.25) : (pay * plane);
 		System.out.println("비행기 " + plane + "대의 가격은 " + pay + "원 입니다.");
 		
+
+		
+		pay = plane >= 15 ? (pay * plane) - (pay * plane) / 4 : pay * plane; 
+		
+		System.out.println("비행기 " + plane + "대의 가격은 " + pay + "원 입니다.");
+
 		System.out.println("==========================");
 	}
 }
