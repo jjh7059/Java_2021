@@ -15,9 +15,6 @@ public class ForExample {
 		//ex) 1  3  5  7  9
 		for(int i = 1; i <= 9; i++) {
 			if(i % 2 == 1) {
-
-				System.out.print(i + "\t");
-
 				System.out.print(i + " ");
 			} else {
 				continue;
@@ -32,29 +29,18 @@ public class ForExample {
 		//3의 배수의 합계에서 5의 배수의 합계를 뺀 결과를 출력하세요.
 		//ex) 결과 = 633
 
-		int sum_3 = 0, sum_5 = 0;
-
 		int sum3 = 0, sum5 = 0;
 
 		for(int i = 1; i <= 100; i++) {
 			if(i % 3 == 0) {
-
-				sum_3 += i;
-			} else if (i % 5 == 0) {
-				sum_5 += i;
-
 				sum3 += i;
-			}
-			if(i % 5 == 0) {
+			} 
+			if (i % 5 == 0) {
 				sum5 += i;
-
 			}
 		}
 
-		System.out.println("1~100 범위에서 3의 배수 합계 - 5의 배수 합계 = " + (sum_3 - sum_5));
-
-		System.out.println(sum3 - sum5);
-
+		System.out.println("1~100 범위에서 3의 배수 합계 - 5의 배수 합계 = " + (sum3 - sum5));
 		System.out.println("========================================");
 		
 		
@@ -67,8 +53,6 @@ public class ForExample {
 
 			System.out.println("7 * " + i + " = " + 7 * i);
 
-			System.out.println(7 + " * " + i + " = " + 7 * i);
-
 		}
 		System.out.println("========================================");
 		
@@ -76,18 +60,11 @@ public class ForExample {
 		//5!의 결과값을 계산하여 결과값을 출력하세요.(5! = 5 * 4 * 3 * 2 * 1)
 		//ex)5! = 120
 
-		int a = 1;
-		for(int i = 5; i >= 1; i--) {
-			a *= i;
-		}
-		System.out.println("5! = " + a);
-
 		int fac = 1;
 		for(int i = 5; i >= 1; i--) {
 			fac *= i;
 		}
 		System.out.println("5! = " + fac);
-
 		System.out.println("========================================");
 		
 		
@@ -95,13 +72,17 @@ public class ForExample {
 		//단, 한 줄에 정수값이 7개씩 출력되도록 작성하세요.
 		//ex) 36 27 38 39 40 41 42
 		int begin = 36, end = 57;
-		for(int i = begin-1; i <= end; i++) {
-			for(int j = 1; j <= 7; j++) {
-				System.out.print(i+j + " ");				
+		int cnt = 0;
+		for(int i = begin; i <= end; i++) {
+			System.out.print(i + " ");		
+			cnt++;
+			if(cnt % 7 == 0) {
+				System.out.println();
 			}
+		}
+		if(cnt % 7 != 0) {
 			System.out.println();
 		}
-		System.out.println();
 		System.out.println("========================================");
 	}
 }
