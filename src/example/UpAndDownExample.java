@@ -12,6 +12,63 @@ import java.util.Scanner;
 public class UpAndDownExample {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
+		int user = 0;
+		int com = (int)(Math.random() * 100) % 100 + 1;
+		int count = 0;
+		
+		while(true) {
+			while(true) {
+				System.out.print("[입력] >> ");
+				user = in.nextInt();
+				
+				if(user < 1 || user > 100) {
+					System.out.println("1~100 범위 내의 정수값을 입력해주세요.");
+				} else {
+					break;
+				}
+			}
+			
+			count++;
+			
+			if(count == 10) {
+				System.out.println("기회 10회가 소진되었습니다.");
+				System.out.println("정답 >> " + com);
+				break;
+			}
+			
+			if(com > user) {
+				System.out.println("큰값 입력");
+			} else if(com < user) {
+				System.out.println("작은값 입력");
+			}
+			
+			if(com == user) {
+				System.out.println("정답입니다.");
+				break;
+			}
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*
+		Scanner in = new Scanner(System.in);
 		
 		int com = (int)(Math.random() * 100) % 100 + 1;
 		int count = 0;
@@ -26,11 +83,13 @@ public class UpAndDownExample {
 			} else {
 				while(com != num) {
 					count++;
+					
+					
 					if(count == 10) {
-						System.out.println("10회 끝");
+						System.out.println(count + "회 끝, 정답은 : " + com + "입니다.");
 						break;
 					}
-						
+					
 					
 					if(com == num) {
 						System.out.println("맞음");
@@ -41,9 +100,11 @@ public class UpAndDownExample {
 					} else {
 						System.out.println("작은값 입력");
 						break;
-					}
+					}	
 				}
 			}
 		}
+		*/
+		
 	}
 }
