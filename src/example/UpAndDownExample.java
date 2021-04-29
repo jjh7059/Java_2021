@@ -1,5 +1,7 @@
 package example;
 
+import java.util.Scanner;
+
 //컴퓨터로부터 제공받은 정수 난수값을 키보드로 입력하여 맞추는 프로그램을 작성하세요.
 //1~100 범위의 정수 난수값을 제공받도록 작성
 //난수값을 맞출 수 있는 기회는 10번만 제공되도록 작성
@@ -9,6 +11,36 @@ package example;
 //난수값을 10번 안에 맞추지 못한 경우 난수값 출력되도록 작성
 public class UpAndDownExample {
 	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
 		
+		int com = (int)(Math.random() * 100) % 100 + 1;
+		int count = 0;
+		
+		
+		while(true) {
+			System.out.print("입력 >> ");
+			int num = in.nextInt();
+			
+			if(num < 1 || num > 100) {
+				System.out.println("1~100 범위가 아닙니다.");
+			} else {
+				while(com != num) {
+					count++;
+					if(count == 10)
+						System.out.println("10회 끝");
+					
+					if(com == num) {
+						System.out.println("맞음");
+						break;
+					} else if(com > num) {
+						System.out.println("큰값 입력");
+						break;
+					} else {
+						System.out.println("작은값 입력");
+						break;
+					}
+				}
+			}
+		}
 	}
 }
