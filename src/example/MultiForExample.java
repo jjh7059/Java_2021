@@ -61,7 +61,7 @@ public class MultiForExample {
 						i == 2 && j == 4 || i == 4 && j == 2) {
 					System.out.print("¡Ú");
 				} else {
-					System.out.print("¡Ù");					
+					System.out.print("¡Ù");			
 				}
 			}
 			System.out.println();
