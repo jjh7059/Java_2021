@@ -1,5 +1,7 @@
 package example;
 
+import java.util.Scanner;
+
 //키보드로 정수값을 계속 입력받아 합계를 계산하여 출력하는 프로그램을 작성하세요.
 //단, 입력된 정수값이 0인 경우 입력을 종료하고 합계를 출력
 //    정수값 입력[0:종료] >> 10
@@ -8,6 +10,16 @@ package example;
 //    [결과]합계 = 90
 public class TotalTwoExample {
 	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
 		
+		int sum = 0;
+		int a = 1;
+		while(a != 0) {
+			System.out.print("정수값 입력[0:종료] >> ");
+			a = in.nextInt();
+			sum += a;
+		}
+		in.close();
+		System.out.println("[결과]합계 = " + sum);
 	}
 }
