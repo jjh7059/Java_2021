@@ -15,7 +15,13 @@ public class ForExample {
 		//ex) 1  3  5  7  9
 		for(int i = 1; i <= 9; i++) {
 			if(i % 2 == 1) {
+
 				System.out.print(i + "\t");
+
+				System.out.print(i + " ");
+			} else {
+				continue;
+
 			}
 		}
 		System.out.println();
@@ -25,15 +31,30 @@ public class ForExample {
 		//1~100 범위의 정수에서 3의 배수들의 합계와 5의 배수들의 합계를 계산하여
 		//3의 배수의 합계에서 5의 배수의 합계를 뺀 결과를 출력하세요.
 		//ex) 결과 = 633
+
 		int sum_3 = 0, sum_5 = 0;
+
+		int sum3 = 0, sum5 = 0;
+
 		for(int i = 1; i <= 100; i++) {
 			if(i % 3 == 0) {
+
 				sum_3 += i;
 			} else if (i % 5 == 0) {
 				sum_5 += i;
+
+				sum3 += i;
+			}
+			if(i % 5 == 0) {
+				sum5 += i;
+
 			}
 		}
+
 		System.out.println("1~100 범위에서 3의 배수 합계 - 5의 배수 합계 = " + (sum_3 - sum_5));
+
+		System.out.println(sum3 - sum5);
+
 		System.out.println("========================================");
 		
 		
@@ -43,18 +64,30 @@ public class ForExample {
 		//      ...
 		//    7 * 9 = 63
 		for(int i = 1; i <= 9; i++) {
+
 			System.out.println("7 * " + i + " = " + 7 * i);
+
+			System.out.println(7 + " * " + i + " = " + 7 * i);
+
 		}
 		System.out.println("========================================");
 		
 		
 		//5!의 결과값을 계산하여 결과값을 출력하세요.(5! = 5 * 4 * 3 * 2 * 1)
 		//ex)5! = 120
+
 		int a = 1;
 		for(int i = 5; i >= 1; i--) {
 			a *= i;
 		}
 		System.out.println("5! = " + a);
+
+		int fac = 1;
+		for(int i = 5; i >= 1; i--) {
+			fac *= i;
+		}
+		System.out.println("5! = " + fac);
+
 		System.out.println("========================================");
 		
 		
