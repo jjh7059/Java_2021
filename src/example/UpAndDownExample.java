@@ -26,8 +26,11 @@ public class UpAndDownExample {
 			} else {
 				while(com != num) {
 					count++;
-					if(count == 10)
+					if(count == 10) {
 						System.out.println("10회 끝");
+						break;
+					}
+						
 					
 					if(com == num) {
 						System.out.println("맞음");
