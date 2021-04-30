@@ -11,6 +11,7 @@ import java.util.Scanner;
 //    [결과]합계 = 150
 public class TotalOneExample {
 	public static void main(String[] args) {
+		
 		Scanner in = new Scanner(System.in);
 		
 		int sum = 0;

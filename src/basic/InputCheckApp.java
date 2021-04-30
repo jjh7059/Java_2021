@@ -29,7 +29,7 @@ public class InputCheckApp {
 		do {
 			System.out.print("점수 입력[0~100] >> ");
 			score = in.nextInt();
-			if(score < 0 || score > 100) {
+			if(score < 0 || score > 100) {[
 				System.out.println("[에러] 점수는 0~100 범위의 정수값만 입력 가능합니다.");
 			}
 		}while (score < 0 || score > 100);
