@@ -18,7 +18,7 @@ public class GuGuDanExample {
 			int num = in.nextInt();
 			
 			if(num < 2 || num > 9) {
-				System.out.println("2~9 범위를 입력해주세요.");
+				System.out.println("[에러]2~9 범위를 입력해주세요.");
 			} else {
 				for(int i = 1; i <= 9; i++) {
 					System.out.println(num + " * " + i + " = " + num * i);

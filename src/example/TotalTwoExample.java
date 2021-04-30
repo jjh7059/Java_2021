@@ -19,7 +19,7 @@ public class TotalTwoExample {
 			a = in.nextInt();
 			sum += a;
 		}
-		in.close();
 		System.out.println("[결과]합계 = " + sum);
+		in.close();
 	}
 }
