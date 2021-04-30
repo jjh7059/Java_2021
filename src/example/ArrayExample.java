@@ -23,26 +23,7 @@ public class ArrayExample {
 		int[] age_cnt = new int[6];
 		
 		for(int i = 0; i < age.length; i++) {
-			switch(age[i] / 10) {
-			case 1: 
-				age_cnt[0] += 1;
-				continue;
-			case 2: 
-				age_cnt[1] += 1;
-				continue;
-			case 3: 
-				age_cnt[2] += 1;
-				continue;
-			case 4: 
-				age_cnt[3] += 1;
-				continue;
-			case 5: 
-				age_cnt[4] += 1;
-				continue;
-			case 6: 
-				age_cnt[5] += 1;
-				continue;
-			}
+			age_cnt[(age[i] / 10)-1]++;
 		}
 		
 		for(int i = 0; i < age_cnt.length; i++) {
