@@ -13,7 +13,7 @@ public class UpAndDownExample {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		int user = 0;
-		int com = (int)(Math.random() * 100) % 100 + 1;  //Math.random() 함수 검색
+		int com = (int)(Math.random() * 100) % 100 + 1;  
 		int count = 0, count_limit = 10;
 		
 		while(true) {
