@@ -12,7 +12,7 @@ public class ArrayExample {
 			sum += age[i];
 		}
 		System.out.println("평균 나이 = " + sum / age.length + "살");
-		
+		System.out.println("========================================");
 		
 		
 		//배열에 저장된 사람들의 나이를 연령별로 구분하여 인원수를 계산하여 출력하세요.
@@ -24,12 +24,24 @@ public class ArrayExample {
 		
 		for(int i = 0; i < age.length; i++) {
 			switch(age[i] / 10) {
-			case 1: age_cnt[0] += 1;
-			case 2: age_cnt[1] += 1;
-			case 3: age_cnt[2] += 1;
-			case 4: age_cnt[3] += 1;
-			case 5: age_cnt[4] += 1;
-			case 6: age_cnt[5] += 1;
+			case 1: 
+				age_cnt[0] += 1;
+				continue;
+			case 2: 
+				age_cnt[1] += 1;
+				continue;
+			case 3: 
+				age_cnt[2] += 1;
+				continue;
+			case 4: 
+				age_cnt[3] += 1;
+				continue;
+			case 5: 
+				age_cnt[4] += 1;
+				continue;
+			case 6: 
+				age_cnt[5] += 1;
+				continue;
 			}
 		}
 		
