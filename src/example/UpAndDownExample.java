@@ -13,8 +13,8 @@ public class UpAndDownExample {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		int user = 0;
-		int com = (int)(Math.random() * 100) % 100 + 1;
-		int count = 0;
+		int com = (int)(Math.random() * 100) % 100 + 1;  //Math.random() 함수 검색
+		int count = 0, count_limit = 10;
 		
 		while(true) {
 			while(true) {
@@ -22,7 +22,7 @@ public class UpAndDownExample {
 				user = in.nextInt();
 				
 				if(user < 1 || user > 100) {
-					System.out.println("1~100 범위 내의 정수값을 입력해주세요.");
+					System.out.println("[에러]1~100 범위 내의 정수값을 입력해주세요.");
 				} else {
 					break;
 				}
@@ -30,8 +30,8 @@ public class UpAndDownExample {
 			
 			count++;
 			
-			if(count == 10) {
-				System.out.println("기회 10회가 소진되었습니다.");
+			if(count == count_limit) {
+				System.out.println("[종료]기회 " + count_limit + "회가 소진되었습니다.");
 				System.out.println("정답 >> " + com);
 				break;
 			}
@@ -40,71 +40,11 @@ public class UpAndDownExample {
 				System.out.println("큰값 입력");
 			} else if(com < user) {
 				System.out.println("작은값 입력");
-			}
-			
-			if(com == user) {
-				System.out.println("정답입니다.");
+			} else {
+				System.out.println("[종료]정답입니다.");
 				break;
 			}
-			
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		/*
-		Scanner in = new Scanner(System.in);
-		
-		int com = (int)(Math.random() * 100) % 100 + 1;
-		int count = 0;
-		
-		
-		while(true) {
-			System.out.print("입력 >> ");
-			int num = in.nextInt();
-			
-			if(num < 1 || num > 100) {
-				System.out.println("1~100 범위가 아닙니다.");
-			} else {
-				while(com != num) {
-					count++;
-					
-					
-					if(count == 10) {
-						System.out.println(count + "회 끝, 정답은 : " + com + "입니다.");
-						break;
-					}
-					
-					
-					if(com == num) {
-						System.out.println("맞음");
-						break;
-					} else if(com > num) {
-						System.out.println("큰값 입력");
-						break;
-					} else {
-						System.out.println("작은값 입력");
-						break;
-					}	
-				}
-			}
-		}
-		*/
-		
+		in.close();	
 	}
 }
