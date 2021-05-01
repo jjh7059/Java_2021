@@ -22,9 +22,36 @@ public class ArrayExample {
 		//    60대 = 2명
 		int[] age_cnt = new int[6];
 		
+		//동구 풀이
 		for(int i = 0; i < age.length; i++) {
 			age_cnt[(age[i] / 10)-1]++;
 		}
+		
+		
+		/*  내 풀이
+		for(int i = 0; i < age.length; i++) {
+			switch(age[i] / 10) {
+			case 1: 
+				age_cnt[0] += 1;
+				break;
+			case 2: 
+				age_cnt[1] += 1;
+				break;
+			case 3: 
+				age_cnt[2] += 1;
+				break;
+			case 4: 
+				age_cnt[3] += 1;
+				break;
+			case 5: 
+				age_cnt[4] += 1;
+				break;
+			case 6: 
+				age_cnt[5] += 1;
+				break;
+			}
+		}
+		*/
 		
 		for(int i = 0; i < age_cnt.length; i++) {
 			System.out.println((i+1)*10 + "대 = " + age_cnt[i] + "명");
